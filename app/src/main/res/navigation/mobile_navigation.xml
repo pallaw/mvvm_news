@@ -7,20 +7,20 @@
 
     <fragment
         android:id="@+id/navigation_breaking"
-        android:name="com.pallaw.mvvmnews.ui.breaking.BreakingNewsFragment"
+        android:name="com.pallaw.mvvmnews.ui.fragments.BreakingNewsFragment"
         android:label="@string/title_breaking"
         tools:layout="@layout/fragment_breaking" />
 
     <fragment
         android:id="@+id/navigation_saved"
-        android:name="com.pallaw.mvvmnews.ui.saved.SavedFragment"
+        android:name="com.pallaw.mvvmnews.ui.fragments.SavedFragment"
         android:label="@string/title_saved"
         tools:layout="@layout/fragment_saved" />
 
 
     <fragment
         android:id="@+id/navigation_search"
-        android:name="com.pallaw.mvvmnews.ui.search.SearchFragment"
+        android:name="com.pallaw.mvvmnews.ui.fragments.SearchFragment"
         android:label="@string/title_search"
         tools:layout="@layout/fragment_search" />
 

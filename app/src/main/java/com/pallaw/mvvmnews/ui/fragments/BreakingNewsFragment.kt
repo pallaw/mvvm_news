@@ -1,17 +1,13 @@
-package com.pallaw.mvvmnews.ui.breaking
+package com.pallaw.mvvmnews.ui.fragments
 
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.fragment.app.Fragment
-import androidx.fragment.app.viewModels
-import androidx.lifecycle.Observer
 import com.pallaw.mvvmnews.databinding.FragmentBreakingBinding
 
-class BreakingNewsFragment : Fragment() {
+class BreakingNewsFragment : BaseFragment() {
 
-    private val dashboardViewModel: DashboardViewModel by viewModels()
     private var _binding: FragmentBreakingBinding? = null
     private val binding get() = _binding!!
 
@@ -22,14 +18,6 @@ class BreakingNewsFragment : Fragment() {
     ): View? {
         _binding = FragmentBreakingBinding.inflate(inflater, container, false)
         return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        dashboardViewModel.text.observe(viewLifecycleOwner, Observer {
-            binding.textView.text = it
-        })
     }
 
     override fun onDestroyView() {
