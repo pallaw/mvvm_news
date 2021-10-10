@@ -5,6 +5,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.pallaw.mvvmnews.data.Resource
 import com.pallaw.mvvmnews.databinding.FragmentBreakingBinding
@@ -64,6 +65,12 @@ class BreakingNewsFragment : BaseFragment() {
         binding.rvBreakingNews.apply {
             adapter = newsAdapter
             layoutManager = LinearLayoutManager(activity)
+        }
+
+        newsAdapter.setOnItemClickListener {
+            findNavController().navigate(
+                BreakingNewsFragmentDirections.actionNavigationBreakingToArticleDetails(it)
+            )
         }
 
     }

@@ -9,19 +9,41 @@
         android:id="@+id/navigation_breaking"
         android:name="com.pallaw.mvvmnews.ui.fragments.BreakingNewsFragment"
         android:label="@string/title_breaking"
-        tools:layout="@layout/fragment_breaking" />
+        tools:layout="@layout/fragment_breaking" >
+        <action
+            android:id="@+id/action_navigation_breaking_to_articleDetails"
+            app:destination="@id/articleDetails" />
+    </fragment>
 
     <fragment
         android:id="@+id/navigation_saved"
         android:name="com.pallaw.mvvmnews.ui.fragments.SavedFragment"
         android:label="@string/title_saved"
-        tools:layout="@layout/fragment_saved" />
+        tools:layout="@layout/fragment_saved" >
+        <action
+            android:id="@+id/action_navigation_saved_to_articleDetails"
+            app:destination="@id/articleDetails" />
+    </fragment>
 
 
     <fragment
         android:id="@+id/navigation_search"
         android:name="com.pallaw.mvvmnews.ui.fragments.SearchFragment"
         android:label="@string/title_search"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_navigation_search_to_articleDetails"
+            app:destination="@id/articleDetails" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/articleDetails"
+        android:name="com.pallaw.mvvmnews.ArticleDetails"
+        android:label="fragment_article_details"
+        tools:layout="@layout/fragment_article_details" >
+        <argument
+            android:name="article"
+            app:argType="com.pallaw.mvvmnews.data.model.Article" />
+    </fragment>
 
 </navigation>
